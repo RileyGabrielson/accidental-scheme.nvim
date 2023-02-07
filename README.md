@@ -1,5 +1,7 @@
 # accidental-scheme.nvim
 
+![accidental-scheme-cover](https://user-images.githubusercontent.com/65042525/217168433-8a303a74-8432-4bff-964d-40fed03b04fe.jpeg)
+
 A configurable, opinionated colorscheme generator.
 
 ## Features
