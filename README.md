@@ -1,6 +1,4 @@
-# plugin-template.nvim
-
-[![Integration][integration-badge]][integration-runs]
+# accidental-scheme.nvim
 
 A configurable, opinionated colorscheme generator.
 
