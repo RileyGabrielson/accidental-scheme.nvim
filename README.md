@@ -47,8 +47,8 @@ Accidental Scheme has the following defaults
 
 ```lua
 {
-  secondary: "complementary", -- complementary, random, or primary
-  highlight_overrides: {},
+  secondary = "complementary", -- complementary, random, or primary
+  highlight_overrides = {},
 }
 ```
 
