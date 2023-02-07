@@ -43,7 +43,7 @@ use {
 
 ## Usage
 
-Generate a colorscheme with either `:MakeAccidentalScheme` or `:lua require("accidental-scheme").make_accidental_scheme()`. 
+Generate a colorscheme with either `:AccidentalSchemeNew` or `:lua require("accidental-scheme").new_scheme()`.
 
 ## Configuration
 

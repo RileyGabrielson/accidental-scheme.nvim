@@ -11,14 +11,14 @@ end
 
 function accidental_scheme.setup(options)
   accidental_scheme.options = with_defaults(options)
-  vim.api.nvim_create_user_command("MakeAccidentalScheme", accidental_scheme.make_accidental_scheme, {})
+  vim.api.nvim_create_user_command("AccidentalSchemeNew", accidental_scheme.new_scheme, {})
 end
 
 function accidental_scheme.is_configured()
   return accidental_scheme.options ~= nil
 end
 
-function accidental_scheme.make_accidental_scheme()
+function accidental_scheme.new_scheme()
   if not accidental_scheme.is_configured() then
     return
   end

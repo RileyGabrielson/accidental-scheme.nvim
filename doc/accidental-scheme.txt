@@ -32,7 +32,7 @@ Or, if you use `init.lua`: >
 ==============================================================================
 3. COMMANDS                                       *accidental-scheme-commands*
 
-:MakeAccidentalScheme                     		*MakeAccidentalScheme*
+:AccidentalSchemeNew                     		*AccidentalSchemeNew*
 
 Overrides current colorscheme with a randomized color scheme, generated based
 on the configuration provided
@@ -62,7 +62,7 @@ accidental_scheme.is_configured()          *accidental_scheme.is_configured()*
         Return: ~
             true/false
 
-accidental_scheme.make_accidental_scheme()	*accidental_scheme.make_accidental_scheme()*
+accidental_scheme.new_scheme()		      *accidental_scheme.new_scheme()*
         Generates a random scheme based on a primary and secondary color,
 	overriding current color scheme.
 
