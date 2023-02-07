@@ -31,7 +31,6 @@ require("lazy").setup({
 ### [packer](https://github.com/wbthomason/packer.nvim)
 
 ```lua
--- Lua
 use {
   "rileygabrielson/accidental-scheme.nvim",
   config = function()
@@ -48,7 +47,7 @@ Accidental Scheme has the following defaults
 
 ```lua
 {
-  secondary: "complementary",
+  secondary: "complementary", -- complementary, random, or primary
   highlight_overrides: {},
 }
 ```
