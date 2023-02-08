@@ -77,7 +77,7 @@ function M.generate_colors(primary, secondary, shuffle_accents)
     foreground = rgb_utils.rgb_to_hex(foreground),
     primary = rgb_utils.rgb_to_hex(primary),
     secondary = rgb_utils.rgb_to_hex(secondary),
-    brown = rgb_utils.combine_rgb(secondary, 1, base_colors.brown, 3);
+    brown = rgb_utils.rgb_to_hex(rgb_utils.combine_rgb(secondary, 1, base_colors.brown, 3));
   }
   for key, value in pairs(off_base_colors) do colors[key] = rgb_utils.rgb_to_hex(value) end;
   for key, value in pairs(combination_colors) do colors[key] = rgb_utils.rgb_to_hex(value) end;
