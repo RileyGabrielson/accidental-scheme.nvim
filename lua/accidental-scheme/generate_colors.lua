@@ -3,12 +3,29 @@ local base_colors = rgb_utils.get_base_colors();
 
 local M = {}
 
-function M.shuffle(tbl)
-  for i = #tbl, 2, -1 do
-    local j = math.random(i)
-    tbl[i], tbl[j] = tbl[j], tbl[i]
+function M.shuffle(t)
+    local s = {}
+    for i = 1, #t do s[i] = t[i] end
+    for i = #t, 2, -1 do
+        local j = math.random(i)
+        s[i], s[j] = s[j], s[i]
+    end
+    return s
+end
+
+function M.to_array(tbl, shuffle_accents)
+  local array = {};
+  local k = 1;
+  for _, value in pairs(tbl) do
+    array[k] = value;
+    k = k + 1;
+  end;
+
+  if shuffle_accents then
+    return M.shuffle(array)
+  else
+    return array;
   end
-  return tbl
 end
 
 function M.get_off_base_colors(secondary)
@@ -27,18 +44,16 @@ function M.get_off_base_colors(secondary)
 end
 
 function M.get_accents(off_base_colors, shuffle_accents)
-  if shuffle_accents then
-    off_base_colors = M.shuffle(off_base_colors);
-  end
+  local base_colors_array = M.to_array(off_base_colors, shuffle_accents);
 
   local accents = {
-    accent_one = off_base_colors.orange;
-    accent_two = off_base_colors.yellow;
-    accent_three = off_base_colors.green;
-    accent_four = off_base_colors.cyan;
-    accent_five = off_base_colors.blue;
-    accent_six = off_base_colors.purple;
-    accent_seven = off_base_colors.violet;
+    accent_one = base_colors_array[1],
+    accent_two = base_colors_array[2],
+    accent_three = base_colors_array[3],
+    accent_four = base_colors_array[4],
+    accent_five = base_colors_array[5],
+    accent_six = base_colors_array[6],
+    accent_seven = base_colors_array[7],
   };
   return accents;
 end
