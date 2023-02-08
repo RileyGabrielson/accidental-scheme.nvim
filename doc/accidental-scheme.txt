@@ -52,6 +52,8 @@ accidental_scheme.setup({config})                  *accidental_scheme.setup()*
 	    schemes
         • `highlight_overrides`: Table of Hi overrides for any scheme
 	  generated. Defaults to {};
+	- `shuffle_accents`: Boolean, whether to shuffle colors for
+	  strings, functions, constants, etc. Defaults to true.
 
         Parameters: ~
             {config}(required, table) Table of values; keys are as listed
