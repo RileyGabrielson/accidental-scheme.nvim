@@ -44,8 +44,6 @@ function M.get_off_base_colors(secondary)
 end
 
 function M.get_accents(off_base_colors, shuffle_accents)
-
-  print(shuffle_accents);
   local base_colors_array = M.to_array(off_base_colors, shuffle_accents);
 
   local accents = {
