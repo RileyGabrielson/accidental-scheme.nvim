@@ -4,7 +4,7 @@ describe("generate colors should...", function()
   it('generate colors', function()
     local primary = {r = 100, g = 100, b = 100}
     local secondary = {r = 200, g = 200, b = 200}
-    local colors = generate_colors.generate_colors(primary, secondary);
+    local colors = generate_colors.generate_colors(primary, secondary, false);
 
     assert.combinators.match(colors.primary, "#646464");
     assert.combinators.match(colors.secondary, "#C8C8C8");
