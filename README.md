@@ -61,7 +61,7 @@ For additional details, see `:h accidental-scheme`
 
 ## Todo
 
-- [ ] Accent shuffling configuration (the randomizer isn't random enough. Strings are always a variation of green, constants are always a variation of orange)
+- [x] Accent shuffling configuration (the randomizer isn't random enough. Strings are always a variation of green, constants are always a variation of orange)
 - [ ] Cohesion configuration (how close should each highlight should be to the primary and secondary colors)
 - [ ] Light Mode support
 - [ ] Primary/Secondary hex color configuration
