@@ -4,7 +4,7 @@ local accents = require('accidental-scheme.accents')
 describe("accents should...", function()
   it('generate shuffled accent colors', function()
     local secondary = {r = 200, g = 200, b = 200};
-    local base = generate_colors.get_off_base_colors(secondary);
+    local base = generate_colors.get_off_base_colors(secondary, 1);
     local accent_colors = accents.get_accents(base, false);
 
     assert.is_true(accent_colors.accent_one.r > 0);
@@ -18,7 +18,7 @@ describe("accents should...", function()
 
   it('generate constant accent colors', function()
     local secondary = {r = 200, g = 200, b = 200};
-    local base = generate_colors.get_off_base_colors(secondary);
+    local base = generate_colors.get_off_base_colors(secondary, 1);
     local accent_colors = accents.get_accents(base, true);
 
     assert.combinators.match(accent_colors.accent_one.r, 233);

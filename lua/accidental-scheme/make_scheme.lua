@@ -12,7 +12,12 @@ local function make_scheme(options)
     secondary = primary;
   end
 
-  local colors = generate_colors.generate_colors(primary, secondary, options.constant_accents);
+  local colors = generate_colors.generate_colors(
+    primary,
+    secondary,
+    options.constant_accents,
+    options.accent_cohesion_factor
+  );
   make_highlights.highlight_colors(colors, options.highlight_overrides);
 end
 
