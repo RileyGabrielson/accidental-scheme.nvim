@@ -10,8 +10,18 @@ function M.get_off_base_colors(secondary, accent_cohesion_factor)
     yellow = rgb_utils.combine_rgb(secondary, 2 * accent_cohesion_factor, base_colors.yellow, 3);
     green = rgb_utils.combine_rgb(secondary, 1 * accent_cohesion_factor, base_colors.green, 1);
     cyan = rgb_utils.combine_rgb(secondary, 1 * accent_cohesion_factor, base_colors.cyan, 1);
-    blue = rgb_utils.combine_rgb(rgb_utils.combine_rgb(secondary, 2 * accent_cohesion_factor, base_colors.blue, 3), 1, base_colors.white, 1);
-    purple = rgb_utils.combine_rgb(rgb_utils.combine_rgb(secondary, 2 * accent_cohesion_factor, base_colors.purple, 3), 1, base_colors.white, 1);
+    blue = rgb_utils.combine_rgb(
+      rgb_utils.combine_rgb(secondary, 2 * accent_cohesion_factor, base_colors.blue, 3),
+      1,
+      base_colors.white,
+      1
+    );
+    purple = rgb_utils.combine_rgb(
+      rgb_utils.combine_rgb(secondary, 2 * accent_cohesion_factor, base_colors.purple, 3),
+      1,
+      base_colors.white,
+      1
+    );
     violet = rgb_utils.combine_rgb(secondary, 1 * accent_cohesion_factor, base_colors.violet, 3);
     red = rgb_utils.combine_rgb(secondary, 3 * accent_cohesion_factor, base_colors.red, 3);
     pink = rgb_utils.combine_rgb(secondary, 1 * accent_cohesion_factor, base_colors.pink, 3);
@@ -44,7 +54,13 @@ function M.generate_colors(primary, secondary, constant_accents, accent_cohesion
   local off_base_colors = M.get_off_base_colors(secondary, accent_cohesion_factor);
   local background = rgb_utils.combine_rgb(primary, 1, base_colors.black, 6);
   local foreground = rgb_utils.combine_rgb(primary, 1, base_colors.white, 8);
-  local combination_colors = M.get_combination_colors(background, foreground, secondary, off_base_colors, accent_cohesion_factor);
+  local combination_colors = M.get_combination_colors(
+    background,
+    foreground,
+    secondary,
+    off_base_colors, 
+    accent_cohesion_factor
+  );
   local accent_colors = accents.get_accents(off_base_colors, constant_accents);
 
   local colors = {
