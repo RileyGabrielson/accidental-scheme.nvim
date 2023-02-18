@@ -58,7 +58,7 @@ function M.generate_colors(primary, secondary, constant_accents, accent_cohesion
     background,
     foreground,
     secondary,
-    off_base_colors, 
+    off_base_colors,
     accent_cohesion_factor
   );
   local accent_colors = accents.get_accents(off_base_colors, constant_accents);
