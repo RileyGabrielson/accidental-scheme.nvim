@@ -53,7 +53,7 @@ Accidental Scheme has the following defaults
 {
   secondary = "complementary", -- complementary, random, or primary
   highlight_overrides = {},
-  constant_accents = false,
+  disable_accent_shuffling = false,
   accent_cohesion_factor = 1, -- how close accent colors are to the secondary color
 }
 ```

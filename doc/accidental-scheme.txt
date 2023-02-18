@@ -52,7 +52,7 @@ accidental_scheme.setup({config})                  *accidental_scheme.setup()*
 	    schemes
         • `highlight_overrides`: Table of Hi overrides for any scheme
 	  generated. Defaults to {};
-	- `constant_accents`: Boolean, whether to shuffle colors for
+	- `disable_accent_shuffling`: Boolean, whether to shuffle colors for
 	  strings, functions, constants, etc, or keep them consistent.
 	  Defaults to false.
 	- `accent_cohesion_factor`: Number, how close the generated accent
