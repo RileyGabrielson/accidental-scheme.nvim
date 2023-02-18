@@ -55,6 +55,9 @@ accidental_scheme.setup({config})                  *accidental_scheme.setup()*
 	- `constant_accents`: Boolean, whether to shuffle colors for
 	  strings, functions, constants, etc, or keep them consistent.
 	  Defaults to false.
+	- `accent_cohesion_factor`: Number, how close the generated accent
+	  colors are to the secondary color. If the factor is 0, then the
+	  accents have no relation to the secondary color. Defaults to 1.
 
         Parameters: ~
             {config}(required, table) Table of values; keys are as listed

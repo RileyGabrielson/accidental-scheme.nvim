@@ -54,6 +54,7 @@ Accidental Scheme has the following defaults
   secondary = "complementary", -- complementary, random, or primary
   highlight_overrides = {},
   constant_accents = false,
+  accent_cohesion_factor = 1, -- how close accent colors are to the secondary color
 }
 ```
 
@@ -62,6 +63,6 @@ For additional details, see `:h accidental-scheme`
 ## Todo
 
 - [x] Accent shuffling configuration (the randomizer isn't random enough. Strings are always a variation of green, constants are always a variation of orange)
-- [ ] Cohesion configuration (how close should each highlight should be to the primary and secondary colors)
+- [x] Cohesion configuration (how close should each highlight should be to the primary and secondary colors)
 - [ ] Light Mode support
 - [ ] Primary/Secondary hex color configuration

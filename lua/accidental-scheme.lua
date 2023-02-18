@@ -7,6 +7,7 @@ local function with_defaults(options)
     secondary = options.secondary or "complementary",
     highlight_overrides = options.highlight_overrides or {},
     constant_accents = options.constant_accents or false,
+    accent_cohesion_factor = options.accent_cohesion_factor or 1,
   }
 end
 
